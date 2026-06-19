@@ -1,14 +1,14 @@
-# ⚾ Brewers Community Foundation Grant Awards Web Application
+# Brewers Community Foundation Grant Awards Web Application
 
-## 📖 Overview
+## Overview
 
 The Brewers Community Foundation (BCF) Grant Awards Web Application is a full-stack web application developed through the i.c.stars Milwaukee Cycle 20 program in partnership with Brewers Community Foundation.
 
-The application automates the process of displaying approved grant award information from Monday.com, making it accessible through both a public-facing website and an event kiosk display. By integrating directly with Monday.com, the solution eliminates manual updates and ensures award information remains current and accurate.
+The application automates the process of displaying approved grant award information from Monday.com, making it accessible through both a public-facing website and an event kiosk display. By integrating directly with monday.com, the solution eliminates manual updates and ensures award information remains current and accurate.
 
 ---
 
-## 🎯 Project Objectives
+## Project Objectives
 
 - Automate grant award data retrieval and display.
 - Reduce manual data entry and maintenance.
@@ -18,12 +18,12 @@ The application automates the process of displaying approved grant award informa
 
 ---
 
-## ✨ Features
+##  Features
 
 ### Grant Award Display
 - Displays approved grant recipients and award information.
 - Responsive design for desktop and mobile users.
-- Dynamic content updates from Monday.com.
+- Dynamic content updates from monday.com.
 
 ### Kiosk Experience
 - Dedicated kiosk view for events and presentations.
@@ -31,7 +31,7 @@ The application automates the process of displaying approved grant award informa
 - Large-screen optimized layout.
 
 ### Data Integration
-- Direct integration with Monday.com using GraphQL.
+- Direct integration with monday.com using GraphQL.
 - Automated retrieval of approved award records.
 - Centralized source of truth for displayed data.
 
@@ -42,7 +42,7 @@ The application automates the process of displaying approved grant award informa
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - HTML5
@@ -52,10 +52,12 @@ The application automates the process of displaying approved grant award informa
 ### Backend
 - Node.js
 - Express.js
-- GraphQL
+- node-fetch (for HTTP requests to the monday.com API)
+- multer (for handling file uploads, e.g. grant application attachments)
+- GraphQL (via monday.com API, using node-fetch)
 
 ### Data Source
-- Monday.com API
+- monday.com API
 
 ### Tools & Methodologies
 - GitHub
@@ -64,10 +66,9 @@ The application automates the process of displaying approved grant award informa
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
-```text
-Monday.com
+monday.com
     │
     ▼
 GraphQL API
@@ -82,9 +83,8 @@ Node.js / Express Backend
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
-```text
 BCFProject/
 │
 ├── public/
@@ -106,7 +106,7 @@ BCFProject/
 
 ---
 
-## 🚀 API Endpoints
+## API Endpoints
 
 ### Page Routes
 
@@ -127,7 +127,7 @@ BCFProject/
 
 ---
 
-## ⚙️ Getting Started
+## Getting Started
 
 These instructions will get a local copy of the project up and running on your own machine.
 
@@ -170,7 +170,7 @@ MONDAY_AWARDED_GROUP_ID=your_awarded_group_id
 MONDAY_AWARDED_KIOSK_GROUP_ID=your_awarded_kiosk_group_id
 ```
 
-> ⚠️ **Never commit your `.env` file to GitHub.** It contains sensitive credentials and is already excluded via `.gitignore`.
+>  **Never commit your `.env` file to GitHub.** It contains sensitive credentials and is already excluded via `.gitignore`.
 
 #### Where to find these values
 
@@ -200,7 +200,7 @@ If port 3000 is already in use, either stop the other process or update the port
 
 ---
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 | Issue | Solution |
 |---|---|
@@ -212,7 +212,7 @@ If port 3000 is already in use, either stop the other process or update the port
 
 ---
 
-## 👩‍💻 My Contributions
+## My Contributions
 
 ### Project Management
 - Facilitated team standups and sprint planning.
@@ -233,11 +233,11 @@ If port 3000 is already in use, either stop the other process or update the port
 
 ---
 
-## 🔍 Challenges & Solutions
+## Challenges & Solutions
 
 | Challenge | Solution |
 |------------|------------|
-| Keeping grant information current | Integrated Monday.com as the source of truth |
+| Keeping grant information current | Integrated monday.com as the source of truth |
 | Image display inconsistencies | Implemented fallback image handling |
 | Carousel timing issues | Refined automatic rotation logic |
 | Data formatting errors | Added validation and error handling |
@@ -245,9 +245,9 @@ If port 3000 is already in use, either stop the other process or update the port
 
 ---
 
-## 🏆 Project Highlights
+## Project Highlights
 
-- Successfully integrated Monday.com data into a public-facing application.
+- Successfully integrated monday.com data into a public-facing application.
 - Built a scalable architecture using Node.js, Express, and GraphQL.
 - Delivered both web and kiosk experiences from a shared backend.
 - Reduced manual maintenance of grant award information.
@@ -255,17 +255,16 @@ If port 3000 is already in use, either stop the other process or update the port
 
 ---
 
-## 📈 Future Enhancements
+## Future Enhancements
 
-- Search and filtering functionality
-- Award recipient analytics dashboard
-- Enhanced accessibility features
-- Administrative management portal
-- Additional mobile experience improvements
+- **Visual Impact Dashboard** — Groundwork is already in place, displaying charts and metrics on the number of people and communities impacted by grant awards. The next step is making the dashboard fully automated and dynamic, updating in real time as new grants are approved and stories are added, with no manual input required.
+- **Story Exploration Tools** — Giving users the ability to filter and discover stories most meaningful to them, whether they care about youth programs, food access, education, or other causes, so they can find the stories that resonate with them personally.
+- **Sponsor Story Integration** — While the platform currently amplifies community stories, the next step is connecting sponsors directly to those stories, giving sponsors a dedicated space to showcase their contributions and the impact they're helping drive. This strengthens the partnership between the Brewers, the foundation, and the brands that support the mission.
+- **Expanded Reach** — Stories currently live on the web app and kiosk. The vision is to extend that reach through mobile apps and social media platforms, so these stories travel beyond the ballpark, get shared, and inspire a wider audience.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Special thanks to:
 
@@ -276,7 +275,7 @@ Special thanks to:
 
 ---
 
-## 📋 Project Information
+## Project Information
 
 | Category | Details |
 |-----------|----------|
